@@ -1,0 +1,6 @@
+
+build/zynq-mini-xsa/
+
+*.jou
+
+*.log
