@@ -3,7 +3,7 @@
 build/
 images/linux/
 pre-built/linux/
-.petalinux/*
+.petalinux1/*
 !.petalinux/metadata
 *.o
 *.jou
