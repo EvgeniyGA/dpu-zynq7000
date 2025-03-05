@@ -1,0 +1,10 @@
+3172526837
+
+command_total_run_petalinux-create=1
+command_failures_petalinux-create=0
+command_option_petalinux-create=--type
+command_option_value_petalinux-create=<USER_DEFINED>
+command_option_petalinux-create=--template
+command_option_value_petalinux-create=<USER_DEFINED>
+command_option_petalinux-create=--name
+command_option_value_petalinux-create=<USER_DEFINED>
