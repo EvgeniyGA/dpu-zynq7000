@@ -15,9 +15,9 @@ CONFIG_system-zynq=y
 #
 # sudo 
 #
-# CONFIG_sudo is not set
+CONFIG_sudo=y
 # CONFIG_sudo-dbg is not set
-# CONFIG_sudo-dev is not set
+CONFIG_sudo-dev=y
 
 #
 # base 
@@ -707,9 +707,9 @@ CONFIG_pciutils=y
 #
 # pkgconfig 
 #
-# CONFIG_pkgconfig is not set
+CONFIG_pkgconfig=y
 # CONFIG_pkgconfig-dbg is not set
-# CONFIG_pkgconfig-dev is not set
+CONFIG_pkgconfig-dev=y
 
 #
 # screen 
@@ -1332,10 +1332,10 @@ CONFIG_run-postinsts=y
 #
 # gtk+3 
 #
-# CONFIG_gtkPLUS3 is not set
-# CONFIG_gtkPLUS3-demo is not set
-# CONFIG_gtkPLUS3-dev is not set
-# CONFIG_gtkPLUS3-dbg is not set
+CONFIG_gtkPLUS3=y
+CONFIG_gtkPLUS3-demo=y
+CONFIG_gtkPLUS3-dev=y
+CONFIG_gtkPLUS3-dbg=y
 
 #
 # harfbuzz 
@@ -2622,7 +2622,7 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 #
 # packagegroup-self-hosted 
 #
-# CONFIG_packagegroup-self-hosted is not set
+CONFIG_packagegroup-self-hosted=y
 # CONFIG_packagegroup-self-hosted-extended-dev is not set
 # CONFIG_packagegroup-self-hosted-debug-dev is not set
 # CONFIG_packagegroup-self-hosted-dev is not set
@@ -3874,16 +3874,16 @@ CONFIG_bridge-utils=y
 #
 # packagegroup-petalinux-opencv 
 #
-# CONFIG_packagegroup-petalinux-opencv is not set
+CONFIG_packagegroup-petalinux-opencv=y
 # CONFIG_packagegroup-petalinux-opencv-dbg is not set
-# CONFIG_packagegroup-petalinux-opencv-dev is not set
+CONFIG_packagegroup-petalinux-opencv-dev=y
 
 #
 # packagegroup-petalinux-python-modules 
 #
-# CONFIG_packagegroup-petalinux-python-modules is not set
+CONFIG_packagegroup-petalinux-python-modules=y
 # CONFIG_packagegroup-petalinux-python-modules-dbg is not set
-# CONFIG_packagegroup-petalinux-python-modules-dev is not set
+CONFIG_packagegroup-petalinux-python-modules-dev=y
 
 #
 # packagegroup-petalinux-qt 
@@ -3924,9 +3924,9 @@ CONFIG_bridge-utils=y
 #
 # packagegroup-petalinux-x11 
 #
-# CONFIG_packagegroup-petalinux-x11 is not set
+CONFIG_packagegroup-petalinux-x11=y
 # CONFIG_packagegroup-petalinux-x11-dbg is not set
-# CONFIG_packagegroup-petalinux-x11-dev is not set
+CONFIG_packagegroup-petalinux-x11-dev=y
 
 #
 # Image Features
