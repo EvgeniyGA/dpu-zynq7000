@@ -1,3 +1,34 @@
 /include/ "system-conf.dtsi"
-/ {
+&amba {
+	xlnk {
+		compatible = "xlnx,xlnk-1.0";
+	};
+};
+&amba{
+	dpu{
+	#address-cells = <1>;
+	#size-cells = <1>;
+	compatible = "xilinx,dpu";
+	base-addr = <0x4f000000>; //CHANGE THIS ACCORDING TO YOUR DESIGN
+		dpucore {
+			compatible = "xilinx,dpucore";
+			interrupt-parent = <&intc>;
+			interrupts = <0 29 4>; //CHANGE THIS ACCORDING TO YOUR DESIGN
+			core-num = <0x1>; //CHANGE THIS ACCORDING TO YOUR DESIGN
+		};
+	};
+};
+//usb device tree
+/{ 
+	usb_phy0: usb_phy@0 {
+		compatible = "ulpi-phy";
+		#phy-cells = <0>;
+		reg = <0xe0002000 0x1000>;
+		view-port = <0x0170>;
+		drv-vbus;
+	};
+};
+&usb0 {
+	dr_mode = "host";
+	usb-phy = <&usb_phy0>;
 };
