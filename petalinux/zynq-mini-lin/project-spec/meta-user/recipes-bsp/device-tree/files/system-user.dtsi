@@ -27,8 +27,55 @@
 		view-port = <0x0170>;
 		drv-vbus;
 	};
+	video_timings {
+		timing_1920x1080: timing1 {
+                    clock-frequency = <148500000>;
+                    hactive = <1920>;
+                    vactive = <1080>;
+
+                    hback-porch = <148>;
+                    hsync-len = <44>;
+                    hfront-porch = <88>;
+                    vback-porch = <36>;
+                    vsync-len = <5>;
+                    vfront-porch = <4>;
+
+                    hsync-active = <0>;
+                    vsync-active = <0>;
+                    de-active = <1>;
+                    pixelclk-active = <1>;
+		};
+	};
 };
 &usb0 {
 	dr_mode = "host";
 	usb-phy = <&usb_phy0>;
+};
+
+&axi_dynclk_0 {
+    compatible = "digilent,axi-dynclk";
+    clocks = <&clkc 15>;
+    #clock-cells = <0>;
+};
+
+&v_tc_0 {
+    compatible = "xlnx,v-tc-5.01.a";
+};
+
+&amba_pl {
+    xlnx_vdma_hdmi {
+        compatible = "xilinx,vdmafb";
+        status = "okay";
+
+        xlnx,vtc = <&v_tc_0>;
+        clocks = <&axi_dynclk_0>;
+        clock-names = "hdmi_pclk";
+        dmas = <&axi_vdma_0 0>;
+        dma-names = "hdmi_vdma";
+
+        is-hdmi = <0x1>;
+
+        display-timings = <&timing_1920x1080>;
+        xlnx,pixel-format = "bgr888";
+    };
 };
