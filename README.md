@@ -10,10 +10,15 @@ optional:
 	petalinux-config -c rootfs
 	petalinux-config -c kernel
 	petalinux-build -c kernel -x finish
+ ```bash
 petalinux-build
+```
+```bash
 petalinux-package --boot --force --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/*.bit --u-boot
+```
+```bash
 petalinux-package --bsp -p ./ -o pynq-z2-dpu.bsp
-
+```
 
 128MB partition called "BOOT" with file system FAT32;
 Partition called "rootfs" with the rest of the storage space and with file system EXT4;
